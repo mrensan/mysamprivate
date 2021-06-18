@@ -41,7 +41,7 @@ MEDIA=private
 - `persist`: After adding all of your information including files and directories
 to the local path, run this command to encrypt and move everything to your shared 
 path in cloud. The old version of encrypted information on shared path will be 
-**OVERWRITTEN**.
+kept as a backup.
 
 ```sh
 mysam.sh persist
