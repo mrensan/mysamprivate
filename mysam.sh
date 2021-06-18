@@ -69,6 +69,8 @@ function toshare() {
     export PINENTRY_USER_DATA="USE_CURSES=1"
     gpg --verbose --symmetric "$TMP_PATH/$MEDIA.tar.gz"
 
+    # keep a backup of the old file
+    mv -v "$SHARED_PATH/$MEDIA.tar.gz.gpg" "$SHARED_PATH/$MEDIA-archived-$(date +'%Y%m%d-%H%M').tar.gz.gpg"
     mv -v "$TMP_PATH/$MEDIA.tar.gz.gpg" "$SHARED_PATH"
 }
 
